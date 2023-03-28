@@ -1488,7 +1488,7 @@ def today_patient(request):
 
 
 
-masterfdhghj
+MASTER-1
 #master
 
 
