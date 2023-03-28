@@ -1,0 +1,166 @@
+{% extends "layouts/base.html" %}
+
+{% block title %} UI Typography {% endblock %} 
+
+<!-- Specific Page CSS goes HERE  -->
+{% block stylesheets %}
+<style>
+
+  
+  </style>
+{% endblock stylesheets %}
+
+{% block content %}
+
+<div class="row">
+  <div class="col-md-12">
+    <div class="card">
+      <div class="card-header mb-5">
+        
+        <h1><span></span>DOCTOR'S DETAILS</h1>
+       
+      </div>
+      <div class="card-body">
+        <div class="blockquote1" >
+        <div class="table-responsive">
+            <table class="table tablesorter " id="">
+              <thead class=" text-primary">
+                <tr>
+                  <th >
+                    <h3>Name</h3>
+                  </th>
+                  <th>
+                    <h3> </h3>
+                   </th>
+                  
+                  <th>
+                   <h3> DETAILS</h3>
+                  </th>
+                  
+                </tr>
+              </thead>
+  
+             
+              <tbody>
+                
+                
+                <tr>
+                  <td>
+                  <h4>{{print_doc.name}} </h4>                   
+                  </td>
+                  <td>
+                    <h3></h3>           
+                    </td>
+                  <td>
+                     <h4> {{print_doc.details}}</h4>
+                  </td>
+                </tr>
+              </a>
+                
+              </tbody>
+            </table>
+          </div>
+        </div>
+ 
+    
+      </div>
+      <div class="card-footer">
+        <input type="button" name="submit" class="btn btn-fill btn-primary noprint" value="PRINT" onclick="printredirect()"></input>
+        
+      </div>
+
+    </div>
+  </div>
+</div>
+
+{% endblock content %}
+
+<!-- Specific Page JS goes HERE  -->
+{% block javascripts %}
+<script>
+
+  function printredirect() {
+    $('.abc').css({
+                    "display": "none"
+              });
+    $('.noprint').css({
+                    "display": "none"
+              });
+    
+    $('.def').css({
+      "display": "block",
+              });
+    $('h1').css({
+                
+      "font-size": "1.5rem"
+        
+        });
+        
+    $('.main-panel .content').css({
+      
+      "padding": "400px 30px 30px 200px",
+      "min-height": "calc(20vh - 70px)"
+              }); 
+
+    $('.card h4').css({
+      
+      "color": "black"
+    
+              });
+    $('.card h3').css({
+      
+      "color": "black"
+    
+              });  
+
+      $('h4').css({
+      
+      "font-size": "1.5rem"
+    
+              });  
+
+            
+
+  
+      
+    
+           
+      window.print();
+      
+      $('.noprint').css({
+                    "display": "block"
+              });
+      $('.def').css({
+      "display": "none"
+              }); 
+              $('.abc').css({
+                    "display": "block"
+              });
+      $('.main-panel .content').css({
+      
+      "padding": "78px 30px 30px 280px",
+      "min-height": "calc(100vh - 70px)"
+              }); 
+
+      $('.card h4').css({
+      
+      "color": "rgba(255, 255, 255, 0.8)"
+    
+              });
+      $('.card h3').css({
+      
+      "color": "rgba(255, 255, 255, 0.8)"
+    
+              }); 
+              
+              $('h4').css({
+      
+      "font-size": "1.0625rem"
+    
+              });  
+
+            
+            
+  }
+  </script>
+{% endblock javascripts %}

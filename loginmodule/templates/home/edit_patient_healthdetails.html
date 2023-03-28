@@ -1,0 +1,1043 @@
+{% extends "layouts/base.html" %}
+
+{% block title %} Register {% endblock %} 
+
+<!-- Specific Page CSS goes HERE  -->
+{% block stylesheets %}
+<link href="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/css/select2.min.css" rel="stylesheet" />
+
+<style>
+  .form-group .select-cities ,.form-group .chosen-cities {
+    padding: 10px 18px 10px 18px;
+    border-color: #2b3553;
+    border-radius: 0.4285rem;
+    font-size: 0.75rem;
+    transition: color 0.3s ease-in-out, border-color 0.3s ease-in-out, background-color 0.3s ease-in-out;
+    display: block;
+    width: 100%;
+    height: calc(7rem + 2px);
+   
+    font-weight: 400;
+    line-height: 1.42857;
+    color: rgba(255, 255, 255, 0.8);
+    background-color: transparent;
+    background-clip: padding-box;
+    border: 1px solid #2b3553;
+    
+    box-shadow: none;
+    
+}
+#someinput{
+  padding: 10px 18px 10px 18px;
+    border-color: #2b3553;
+    border-radius: 0.4285rem;
+    font-size: 0.75rem;
+    transition: color 0.3s ease-in-out, border-color 0.3s ease-in-out, background-color 0.3s ease-in-out;
+    display: block;
+    width: 100%;
+    height: calc(2.25rem + 2px);
+   
+    font-weight: 400;
+    line-height: 1.42857;
+    color: rgba(255, 255, 255, 0.8);
+    background-color: transparent;
+    background-clip: padding-box;
+    border: 1px solid #2b3553;
+    
+    box-shadow: none;
+    
+}
+
+#time{
+  padding: 10px 18px 10px 18px;
+    border-color: #2b3553;
+    border-radius: 0.4285rem;
+    font-size: 0.75rem;
+    transition: color 0.3s ease-in-out, border-color 0.3s ease-in-out, background-color 0.3s ease-in-out;
+    display: block;
+    width: 100%;
+    height: calc(2.25rem + 2px);
+   
+    font-weight: 400;
+    line-height: 1.42857;
+    color: rgba(255, 255, 255, 0.8);
+    background-color: transparent;
+    background-clip: padding-box;
+    border: 1px solid #2b3553;
+    
+    box-shadow: none;
+    
+}
+
+
+</style>
+<style>
+
+
+
+.select2.select2-container {
+  width: 100% !important;
+}
+
+.select2.select2-container .select2-selection {
+  border-color: #2b3553;
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  border-radius: 3px;
+  height: 34px;
+  margin-bottom: 15px;
+  outline: none !important;
+  transition: all .15s ease-in-out;
+}
+
+.select2.select2-container .select2-selection .select2-selection__rendered {
+  color: rgba(255, 255, 255, 0.8);
+  line-height: 32px;
+  padding-right: 33px;
+}
+
+.select2.select2-container .select2-selection .select2-selection__arrow {
+  background: #e14eca;
+  background-image: linear-gradient(to bottom left, #e14eca, #ba54f5, #e14eca) !important;
+  border-left: 1px solid #ccc;
+  -webkit-border-radius: 0 3px 3px 0;
+  -moz-border-radius: 0 3px 3px 0;
+  border-radius: 0 3px 3px 0;
+  height: 32px;
+  width: 33px;
+}
+
+.select2.select2-container.select2-container--open .select2-selection.select2-selection--single {
+  background: transparent;
+  
+}
+
+.select2.select2-container.select2-container--open .select2-selection.select2-selection--single .select2-selection__arrow {
+  -webkit-border-radius: 0 3px 0 0;
+  -moz-border-radius: 0 3px 0 0;
+  border-radius: 0 3px 0 0;
+}
+
+.select2.select2-container.select2-container--open .select2-selection.select2-selection--multiple {
+  border: 1px solid #34495e;
+}
+
+.select2.select2-container .select2-selection--multiple {
+  height: auto;
+  min-height: 34px;
+}
+
+.select2.select2-container .select2-selection--multiple .select2-search--inline .select2-search__field {
+  margin-top: 0;
+  height: 32px;
+}
+
+.select2.select2-container .select2-selection--multiple .select2-selection__rendered {
+  display: block;
+  padding: 0 4px;
+  line-height: 29px;
+}
+
+.select2.select2-container .select2-selection--multiple .select2-selection__choice {
+  background-color: transparent;
+  border: 1px solid #ccc;
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  border-radius: 3px;
+  margin: 4px 4px 0 0;
+  padding: 0 6px 0 22px;
+  height: 24px;
+  line-height: 24px;
+  font-size: 12px;
+  position: relative;
+}
+
+.select2.select2-container .select2-selection--multiple .select2-selection__choice .select2-selection__choice__remove {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 22px;
+  width: 22px;
+  margin: 0;
+  text-align: center;
+  color: #e74c3c;
+  font-weight: bold;
+  font-size: 16px;
+}
+
+.select2-container .select2-dropdown {
+  background: transparent;
+  border: none;
+  margin-top: -5px;
+}
+
+.select2-container .select2-dropdown .select2-search {
+  padding: 0;
+}
+
+.select2-container .select2-dropdown .select2-search input {
+  outline: none !important;
+  border: 1px solid #34495e !important;
+  border-bottom: none !important;
+  padding: 4px 6px !important;
+  background-color: #4f5a75;;
+}
+
+.select2-container .select2-dropdown .select2-results {
+  padding: 0;
+}
+
+.select2-container .select2-dropdown .select2-results ul {
+  background: #4f5a75;
+  border: 1px solid #34495e;
+}
+
+.select2-container .select2-dropdown .select2-results ul .select2-results__option--highlighted[aria-selected] {
+  background-color: #273b4f;
+}
+
+.select2-container--default .select2-results__option--selected {
+    background-color: rgb(173, 44, 44);
+}
+.select2-container--default .select2-results__option--selected {
+    background-color: rgb(159, 25, 25);
+}
+.select2-container--default .select2-selection--single {
+    background-color: transparent;
+    color: rgba(255, 255, 255, 0.8)
+}
+.select2-container--default .select2-selection--multiple {
+    background-color: transparent;
+    border: 1px solid #aaa;
+    border-radius: 4px;
+    cursor: text;
+    padding-bottom: 5px;
+    padding-right: 5px;
+    position: relative;
+    color: rgba(255, 255, 255, 0.8)
+}
+.select2-container--default .select2-search--inline .select2-search__field {
+     background: transparent;
+    border: none;
+    outline: 0;
+    box-shadow: none;
+    -webkit-appearance: textfield;
+   
+}
+
+.select2-container--default .select2-selection--single .select2-selection__arrow b {
+    border-color: white transparent transparent transparent;
+    border-style: solid;
+    border-width: 5px 4px 0 4px;
+    height: 0;
+    left: 50%;
+    margin-left: -4px;
+    margin-top: -2px;
+    position: absolute;
+    top: 50%;
+    width: 0;
+}
+
+
+.blockquote1{
+    border-left: none;
+    border-right: none;
+    border-bottom: none;
+    /*border: 1px solid #344675;*/
+    padding: 20px;
+    font-size: 2rem;
+    line-height: 1.8;
+}
+
+</style>
+
+
+
+<!--<link href="https://cdn.jsdelivr.net/npm/select2@4.0.13/dist/css/select2.min.css" rel="stylesheet" />-->
+<!--<link href="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.7/css/select2.min.css" rel="stylesheet" />-->
+
+
+
+
+
+{% endblock stylesheets %}
+
+{% block content %}
+
+        <div class="row">
+          
+            <div class="col-md-7 noprint">
+              <div class="card">
+
+                <form role="form" method="post" action="{% url 'editpatient_health_detail' pid vid %}">
+                  {% csrf_token %}
+                  <div class="card-header">
+                      <h3 class="card-title">NAME:-{{patient.fname}} {{patient.lname}} </h3>
+                      <h3 class="card-title">GENDER:-{{patient.gender}} </h3>
+                      <h3 class="card-title">CONTACT:-{{patient.contact}} </h3>
+                      <h3 class="card-title">AGE:-{{patient.age}} </h3>
+                      
+                      
+
+                    
+                  </div>
+
+                    <div class="card-body ">
+
+   
+                      <div class="main2">
+                        <div class="row">
+                          <div class="col-md-3 px-md-1">
+                            <div class="form-group">
+                              <label>SYMPTOMS</label>
+                            
+                              <select class="form-control select2" name="symptoms">
+                                {% for s in symptoms %}
+                                <option value="{{s}}" disabled selected>{{s}}</option>
+                                {%endfor%}
+                                {% for s in symp%}
+                                <option >{{s}}</option>
+                                {%endfor%}
+                              </select>
+                                
+                            </div>
+                          </div>
+      
+                          <div class="col-md-3 px-md-1">
+                            <div class="form-group">
+                              <label>DIAGNOSIS</label>
+                              <select class="form-control select2" name="diagnostic" >
+                                {% for d in diagnosis %}
+                                <option value="{{d}}" disabled selected>{{d}}</option>
+                                {%endfor%}
+                                {% for d in dies%}
+                                <option >{{d}}</option>
+                              {%endfor%}
+                              </select>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+
+                        <div class="new-wrap1" style="display: none ;" >
+                          <div class="w-row">
+                            <div class="row">
+                              
+                                <div class="col-md-4 px-md-10">
+                                    <label>MEDICINE</label>
+                                    <select class="form-control select2 prescription" name="prescription" >
+                                      <option value=" " disabled selected>SELECT MEDICINE</option>
+                                      {% for m in medi%}
+                                      <option >{{m.medicine_type}}.{{m.medicine_name}}</option>
+                                      {%endfor%}
+                                    </select>
+                                </div>
+
+                                <div class="col-md-2 px-md-1">
+                                  <div class="form-group">
+                                    <label>NOTE</label>
+                                    <input class="form-control note" id="note" name="note"  type="text" value="">
+                                  </div>
+                                </div>
+                              
+                                <div class="col-md-2 px-md-1">
+                                <div class="form-group">
+                                  <label>TIME</label>
+                                <select class="form-control select2 time" name="time" >
+                                  <option  value="" selected >NONE</option>
+                                  
+                                  <option >OD</option>
+                                  <option >BD</option>
+                                  <option >TDS</option>
+                                  
+                                  <option >QDS</option>
+                                  <option >HS</option>
+                                  <option >SOS</option>
+                                  
+                                  <option >ALTERNATE DAYS</option>
+                                  <option >WEEKLY</option>
+                                  <option >MONTHLY</option>
+                                </select>
+                              </div>
+                              </div>
+
+                              <div class="col-md-2 px-md-1">
+                                <div class="form-group">
+                                  <label>SCHD TIME</label>
+                                <select class="form-control select2 schdtime" name="schdtime" >
+                                  <option value="" selected >NONE</option>
+                                
+                                  <option >BEFORE EAT</option>
+                                  <option >AFTER EAT</option>
+                                  
+                                </select>
+                              </div>
+                              </div>
+
+                                
+                            
+
+                                <div class="col-md-1 px-md-1">
+                                  <div class="form-group">
+                                    <label>COUNT</label>
+                                    <input class="form-control countt" id="countt" name="countt"  type="text" value="">
+                                  </div>
+                                </div>
+                                
+                                
+                                <div class="form-check">
+                                  <label class="form-check-label">
+                                    <input class="form-check-input printpres" type="checkbox" name="printpres"  value="">
+                                    <span class="form-check-sign">
+                                      <span class="check"></span>
+                                    </span>
+                                  </label>
+                                </div>
+                          </div>
+                        </div>
+                      </div>
+                    
+                         
+                            
+                         
+                          <div class="main"> 
+
+                          </div>
+            
+                        <button type="button" class="btn btn-primary w-10 add">+</button>
+                        <button type="button" class="btn btn-primary " id="remove-prescription" >-</button>
+                        
+                        <div class="row">
+                          <div class="col-md-3 px-md-1">
+                            <div class="form-group">
+                              <label>FEES</label>
+                            
+                              <input class="form-control" id="fees" name="fees"  type="number" value="{{fees}}">
+                            </div>
+                          </div>
+                      
+                          <div class="col-md-3 px-md-1">
+                            <div class="form-group">
+                              <label>PAID</label>
+                              <input class="form-control" id="paid" name="paid"  type="number" value="{{paid}}">
+                            </div>
+                          </div>
+                        </div>
+
+                  
+                        <div class="row">
+                          <div class="col-md-3 px-md-1">
+                            <div class="form-group">
+                              <label>INVESTIGATE</label>
+                            
+                              <input class="form-control" id="report" name="report"  type="text" value="{{report}}">
+                            </div>
+                          </div>
+                        </div>
+                      
+
+                  
+                  <div class="w-row ">
+                  <div class="row docref"> <!-- for implementing jquery selcect2-->
+                    <div class="col-md-3 px-md-8">
+                        <label>DOC GROUP</label>
+                        <select class="form-control select2 group_doc" >
+                          <option selected value="selected">SELECT GROUP</option>
+                          {% for m in docgroup%}
+                          <option value="{{m.gname}}">{{m.gname}}</option>
+                          {%endfor%}
+                        </select>
+                    </div>
+
+                    
+
+                    <div class="col-md-3 px-md-8">
+                      <div class="form-group">
+                        <label>DOC NAMES</label>
+                        <select class="form-control select2 refdoc" name="refdoc">
+                          
+                        </select>
+                      </div>
+                    </div>
+                  </div>
+                  </div>
+                </div>
+                   
+
+                    <div class="card-footer">
+                    <button type="submit" name="submit" class="btn btn-fill btn-primary">SUBMIT</button>
+                    
+                    </div>
+                </form>
+              </div>
+            
+          </div>
+          <div class="col-md-5 abc">
+            <div class="card">
+              <div class="card-header">
+                <h3 class="card-title print">PRESCRIPTION TO PRINT:-</h3>
+              </div>
+              <div class="card-body">
+               
+                  <!--<h3><span>PAID:-</span></h3>-->
+                <blockquote>
+                  <div class="blockquote blockquote-primary" >
+                     <div class="medicine" id="livepres">
+             
+                     </div>
+                     <div class="docref" id="livedoc">
+             
+                    </div>
+
+                  </div>
+                </blockquote>
+            
+            </div>
+            <div class="card-footer">
+              <input type="button" name="submit" class="btn btn-fill btn-primary noprint" value="PRINT" onclick="printredirect()"></input>
+            </div>
+
+            </div>
+
+            <div class="card">
+              <div class="card-header">
+                
+              </div>
+              <div class="card-body">
+               
+                  <!--<h3><span>PAID:-</span></h3>-->
+              
+                  <div class="container">
+                    <div class="col-md-12">
+                        <div class="panel panel-default">
+                          <!-- <div class="panel-heading">
+                            Employee
+                          </div> -->
+                          <div class="panel-body">
+                      <table class="table table-responsive table-hover">
+                      <thead>
+                          <tr>
+                            <th>CLICK TO VIEW</th>
+                            <th>DATE</th>
+                            <th>PRESCRIPTION</th>
+                            <th>DAIGNOSIS</th>
+                            <th>SYMPTOMS</th>
+                            <!-- <th>ACCOUNT</th> -->
+                          </tr>
+                      </thead>
+                  
+                      <tbody>
+                            {% for i in last_five_visit_summary_details %}
+                            <tr data-toggle="collapse" data-target="#demo1" class="accordion-toggle">
+                                <td><button class="btn btn-default btn-xs"><span class="glyphicon glyphicon-eye-open"></span></button></td>
+                                <td>{{i.date}}</td>
+                                <td>{{i.prescription}}<br>{{i.print_prescription}}</td>
+                                <td>{{i.diagnosis}}</td>
+                                <td>{{i.symptoms}}</td>
+                            </tr>
+                            <!--  -->
+                            <tr>
+                              <td colspan="6" class="hiddenRow"><div id="demo1" class="accordian-body collapse">
+                                
+                                {{i.prescription}}
+                                <p class="text-success">{{i.print_prescription}}</p>
+                                <br>
+                               <a href="{% url 'editpatient_health_detail' pid i.id %}">
+                               <button class="btn btn-default btn-xs"><span class="glyphicon glyphicon-eye-open"></span>EDIT</button></a>
+                               <button class="btn btn-default btn-xs"><span class="glyphicon glyphicon-eye-open"></span>PRINT</button>
+                              </div>
+                              </td>
+                             
+                            </tr>
+                            {%endfor%}
+                            
+                            
+                      </tbody>
+                  </table>
+                            </div>
+                        </div> 
+                    </div>
+                </div>
+                         
+                  
+                  
+            </div>
+            <div class="card-footer">
+             
+            </div>
+
+            </div>
+          </div>
+
+          <div class="col-md-12 def" style="display: none;"  >
+            
+          
+            <div class="blockquote1" >
+                     <div class="medicine" id="livepres1">
+                      
+                     </div>
+                     <div class="docref" id="livedoc1">
+             
+                    </div>
+                  </div>
+                
+            
+            <!--</div>-->
+            
+            <!--</div>-->
+          </div>
+
+      </div>
+      
+
+
+      
+
+
+{% endblock content %}
+
+<!-- Specific Page JS goes HERE  -->
+{% block javascripts %}
+
+<script>
+
+function selectRefresh() {
+  $('.main .select2').select2({
+    //-^^^^^^^^--- update here
+    tags: true,
+    placeholder: "Select an Option",
+    allowClear: true,
+    width: '100%',
+    containerCssClass: "myFont" 
+  });
+}
+
+
+//var prescription_list = {{prescription|safe }};
+$(document).ready(function(){
+  //var row=$('.new-wrap1').clone();
+  var prescription_list = JSON.parse("{{prescription|escapejs}}");
+  var note_list = JSON.parse("{{note|escapejs}}");
+  var time_list = JSON.parse("{{time|escapejs}}");
+  var schd_time_list = JSON.parse("{{schd_time|escapejs}}");
+  var count_list = JSON.parse("{{count|escapejs}}");
+
+  var prescription_list1 = new Array();
+
+  len= prescription_list.length
+  for( let i = 0; i<len; i++){
+    prescription_list1.push(prescription_list[i]);
+  }
+  
+  console.log(prescription_list);
+  console.log(note_list);
+  console.log(time_list);
+  console.log(schd_time_list);
+  console.log(count_list);
+
+  console.log(prescription_list1);
+
+  len= prescription_list1.length
+  console.log(len);
+  var counter = 1;
+  for( let i = 0; i<len; i++){
+  var $newDiv = $("<div></div>");
+  $newDiv.attr("id", "newDiv" + i);
+  $('.main').append($newDiv);
+  $newDiv.append($('.new-wrap1').html());
+  console.log($newDiv)
+  $('.prescription','#newDiv'+i,).val(prescription_list[i]);
+  $('.note','#newDiv'+i,).val(note_list[i]);
+  $('.time','#newDiv'+i,).val(time_list[i]);
+  $('.schdtime','#newDiv'+i,).val(schd_time_list[i]);
+  $('.counttn','#newDiv'+i,).val(count_list[i]);
+  //console.log($('.new-wrap1').html());
+  selectRefresh();
+
+  $(".printpres","#newDiv"+i).change(function() {
+    var values = new Array();
+  $(".printpres:checked").each(function() {
+    var v1 = $(this).closest(".row").find(".note").val() 
+    //values.push(v1)
+    var v2 = $(this).closest(".row").find(".countt").val() 
+    var v3 = $(this).closest(".row").find(".prescription").val() || 0
+    var v4 = $(this).closest(".row").find(".time").val() || 0
+    var v5 = $(this).closest(".row").find(".schdtime").val() 
+    var v6
+    var v7 
+    
+   
+    if(v4 ==  'NONE'){
+      v6="";
+    }
+
+    else if(v4 ==  'OD'){
+      console.log('hey')
+      v6="દિવસ માં એક ટાઈમ";
+    }
+    else if(v4 == 'BD'){
+      v6="સવાર-સાંજ";
+    }
+    else if(v4 == 'TDS'){
+      v6="સવાર-બપોરે-સાંજ";
+    }
+    else if(v4 == 'QDS'){
+      v6="સવાર-બપોરે-સાંજ-રાત્રે";
+    }
+    else if(v4 == 'HS'){
+      v6="રાત્રે";
+    }
+    else if(v4 == 'SOS'){
+      v6="જરૂર પડે તો જ";
+    }
+    else if(v4 == 'ALTERNATE DAYS'){
+      v6="એકત્ર";
+    }
+    else if(v4 == 'WEEKLY'){
+      v6="અઠવાડિયે";
+    }
+    else if(v4 == 'MONTHLY'){
+      v6="મહિને";
+    }
+
+    if(v5 == 'BEFORE EAT'){
+      v7="જમ્યા પહેલાં";
+    }
+    else if(v5 == 'AFTER EAT'){
+      v7="જમ્યા પછી";
+    }
+    else if(v5 == 'NONE'){
+      v7=" ";
+    }
+
+    
+    
+    
+    $(this).val(JSON.stringify([v1,v2,v3,v4,v5]))
+    values.push([v3,v1,v6,v2,v7]);
+    
+    
+    console.log(values)
+
+    var vPool=new Array();
+    len=values.length
+    for( let i = 0; i<len; i++){
+       
+          vPool.push(values[i][0]+"---("+"&nbsp;"+values[i][3]+"&nbsp;"+")&nbsp"+values[i][1]+"&nbsp"+values[i][2]+"&nbsp"+"("+values[i][4]+")");
+      
+    }
+
+    var vPool1="";
+    jQuery.each(vPool, function(i, val) {
+        
+        //jQuery.each(val, function(i, vall) {
+          vPool1 += val+"<br>"  ;
+       // });
+        //vPool+=" </br>"
+        //$("#livepres").append("<tr><td>" + val + "</td></tr>");
+        $('#livepres').html(vPool1);
+        $('#livepres1').html(vPool1);
+       
+    });
+
+    //We add vPool HTML content to #myDIV
+    
+  });
+  //alert("val---" + values.join(", "));
+ 
+})
+
+
+  }
+
+});
+</script>
+
+<script>
+
+function printredirect() {
+  $('.abc').css({
+                  "display": "none"
+            });
+  $('.noprint').css({
+                  "display": "none"
+            });
+  
+  $('.def').css({
+    "display": "block",
+            });
+  $('h1').css({
+              
+    "font-size": "1.5rem"
+      
+      });
+      
+  $('.main-panel .content').css({
+    
+    "padding": "500px 30px 30px 10px",
+    "min-height": "calc(20vh - 70px)"
+            }); 
+
+    
+  
+         
+    window.print();
+    
+    $('.noprint').css({
+                  "display": "block"
+            });
+    $('.def').css({
+    "display": "none"
+            }); 
+            $('.abc').css({
+                  "display": "block"
+            });
+    $('.main-panel .content').css({
+    
+    "padding": "78px 30px 30px 280px",
+    "min-height": "calc(100vh - 70px)"
+            }); 
+          
+}
+
+</script>
+
+<script>
+  $(document).ready(function(){
+var response1;
+// State : after selection of country
+$(".group_doc").change(function(){
+    let group_name = $(this).val();
+    console.log(group_name);
+    console.log(`refdocs/get_doc_names?group_name=${group_name}`);
+    if(group_name == 'selected'){
+      $(".refdoc").empty();
+      $(".refdoc").append('<option disabled="true" selected="true">--none--</option>');
+    }
+    else{
+    $.ajax({
+        url: `/refdocs/get_doc_names?group_name=${group_name}`,
+        type: 'get',
+        dataType: 'json',
+
+        success:function(response){
+            response = JSON.parse(response);
+            response1=response
+            len = response.length;
+            console.log(response)
+            $(".refdoc").empty();
+            $(".refdoc").append('<option disabled="true" selected="true">--none--</option>')
+            for( let i = 0; i<len; i++){
+                let doc_names = response[i].fields.name;
+                $(".refdoc").append("<option value='"+doc_names+"'>"+doc_names+"</option>");
+            }
+            
+            var docName = $('.refdoc').find(":selected").text();
+            for( let i = 0; i<len; i++){
+              if(response[i].fields.name == docName){
+                var ref_doc=response[i].fields.name;
+                var ref_doc_add=response[i].fields.details;
+                console.log(ref_doc)
+                console.log(ref_doc_add)
+                $("#livedoc").html("</br></br>" + ref_doc + "</br>"+ref_doc_add);
+                $("#livedoc1").html("</br></br>" + ref_doc + "</br>"+ref_doc_add);
+              }
+              else{
+                continue;
+              }
+                
+            }
+        }
+    });
+  }
+});
+
+$(".refdoc").change(function(){
+  var docName = $('.refdoc').find(":selected").text();
+                len=response1.length;
+            for( let i = 0; i<len; i++){
+              if(response1[i].fields.name == docName){
+                var ref_doc=response1[i].fields.name;
+                var ref_doc_add=response1[i].fields.details;
+                console.log(ref_doc)
+                console.log(ref_doc_add)
+                $('#livedoc').html("</br></br>" + ref_doc + "</br>"+ref_doc_add);
+                $("#livedoc1").html("</br></br>" + ref_doc + "</br>"+ref_doc_add);
+
+                //$("#livedoc").append("</br></br>" + ref_doc + "</br>"+ref_doc_add);
+                //$("#livepres1").append("</br></br>" + ref_doc + "</br>"+ref_doc_add);
+                      }
+              else{
+                continue;
+              }
+                
+            }
+});
+
+  });
+</script>
+
+
+<script type="text/javascript">
+  $(document).ready(function() {
+$(".docref .select2").select2();
+});
+</script>
+
+
+
+<script>
+
+$(document).ready(function() {
+    $('.main2 .select2').select2({
+      multiple: true,
+    });
+});
+
+
+ function selectRefresh() {
+  $('.main .select2').select2({
+    //-^^^^^^^^--- update here
+    tags: true,
+    placeholder: "Select an Option",
+    allowClear: true,
+    width: '100%',
+    containerCssClass: "myFont" 
+  });
+}
+
+
+
+$('.add').click(function() {
+  //var row=$('.new-wrap1').clone();
+  $('.main').append($('.new-wrap1').html());
+  //console.log($('.new-wrap1').html());
+  selectRefresh();
+
+  $(".printpres").change(function() {
+    var values = new Array();
+  $(".printpres:checked").each(function() {
+    var v1 = $(this).closest(".row").find(".note").val() 
+    //values.push(v1)
+    var v2 = $(this).closest(".row").find(".countt").val() 
+    var v3 = $(this).closest(".row").find(".prescription").val() || 0
+    var v4 = $(this).closest(".row").find(".time").val() || 0
+    var v5 = $(this).closest(".row").find(".schdtime").val() 
+    var v6
+    var v7 
+    
+   
+    if(v4 ==  'NONE'){
+      v6="";
+    }
+
+    else if(v4 ==  'OD'){
+      console.log('hey')
+      v6="દિવસ માં એક ટાઈમ";
+    }
+    else if(v4 == 'BD'){
+      v6="સવાર-સાંજ";
+    }
+    else if(v4 == 'TDS'){
+      v6="સવાર-બપોરે-સાંજ";
+    }
+    else if(v4 == 'QDS'){
+      v6="સવાર-બપોરે-સાંજ-રાત્રે";
+    }
+    else if(v4 == 'HS'){
+      v6="રાત્રે";
+    }
+    else if(v4 == 'SOS'){
+      v6="જરૂર પડે તો જ";
+    }
+    else if(v4 == 'ALTERNATE DAYS'){
+      v6="એકત્ર";
+    }
+    else if(v4 == 'WEEKLY'){
+      v6="અઠવાડિયે";
+    }
+    else if(v4 == 'MONTHLY'){
+      v6="મહિને";
+    }
+
+    if(v5 == 'BEFORE EAT'){
+      v7="જમ્યા પહેલાં";
+    }
+    else if(v5 == 'AFTER EAT'){
+      v7="જમ્યા પછી";
+    }
+    else if(v5 == 'NONE'){
+      v7=" ";
+    }
+
+    
+    
+    
+    $(this).val(JSON.stringify([v1,v2,v3,v4,v5]))
+    values.push([v3,v1,v6,v2,v7]);
+    
+    
+    console.log(values)
+
+    var vPool=new Array();
+    len=values.length
+    for( let i = 0; i<len; i++){
+       
+          vPool.push(values[i][0]+"---("+"&nbsp;"+values[i][3]+"&nbsp;"+")&nbsp"+values[i][1]+"&nbsp"+values[i][2]+"&nbsp"+"("+values[i][4]+")");
+      
+    }
+
+    var vPool1="";
+    jQuery.each(vPool, function(i, val) {
+        
+        //jQuery.each(val, function(i, vall) {
+          vPool1 += val+"<br>"  ;
+       // });
+        //vPool+=" </br>"
+        //$("#livepres").append("<tr><td>" + val + "</td></tr>");
+        $('#livepres').html(vPool1);
+        $('#livepres1').html(vPool1);
+       
+    });
+
+    //We add vPool HTML content to #myDIV
+    
+  });
+  //alert("val---" + values.join(", "));
+ 
+})
+
+});
+
+
+
+$(document).ready(function() {
+  //selectRefresh();
+});
+
+$('.remove').click(function() {
+
+    $('.main').remove($('.new-wrap1').html());
+  });
+
+  $('#remove-prescription').click(function(){
+        $(".main .w-row:last").remove();
+	});
+</script>
+
+
+
+<script type="text/javascript" src="http://code.jquery.com/jquery-latest.min.js"></script>
+<script type="text/javascript" src="http://yourjavascript.com/7174319415/script.js"></script>
+        
+<script src="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/js/select2.min.js"></script>
+
+       
+<!---->
+
+{% endblock javascripts %}
+
+
+
+
+     

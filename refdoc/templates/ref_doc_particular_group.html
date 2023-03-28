@@ -1,0 +1,171 @@
+{% extends "layouts/base.html" %}
+
+{% block title %} UI Tables {% endblock %} 
+
+<!-- Specific Page CSS goes HERE  -->
+{% block stylesheets %}{% endblock stylesheets %}
+
+{% block navbar %}
+<li class="search-bar input-group">
+  <button class="btn btn-link" id="search-button" data-toggle="modal" data-target="#searchModal"><i class="tim-icons icon-zoom-split" ></i>
+    <span class="d-lg-none d-md-block">Search</span>
+  </button>
+</li>
+{% endblock navbar %}
+{% block navend%}
+<form class="d-flex" method="post" action="/refdocs/searchrefdoc/{{gid}}">
+  {% csrf_token %} 
+  <div class="modal modal-search fade" id="searchModal" tabindex="-1" role="dialog" aria-labelledby="searchModal" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <input type="text" class="form-control" name="search" id="inlineFormInputGroup" placeholder="SEARCH">
+          
+          <button type="submit" class="close">
+            <i class="tim-icons icon-zoom-split"></i>
+          </button>
+          
+        </div>
+      </div>
+    </div>
+  </div>
+</form>
+
+{% endblock navend%}
+
+{% block content %}
+
+<div class="row">
+  <div class="col-md-12">
+    <div class="card w-100">
+      <form role="form" method="post" action="/refdocs/ref_doctor_particular_group/{{gid}}" enctype="multipart/form-data">
+        {% csrf_token %}
+        <div class="card-header">
+          <h3 class="card-title">UPLOAD EXECL FILE FOR REFERENCE DOCTOR {{gid}}</h3>
+        </div>
+        <div class="card-body">
+          <div class="row">
+            <div class="col-md-8 px-md-1">
+              <div class="form-group">
+                <button class="btn btn-fill btn-primary w-80">
+                  CLICK HERE TO UPLOAD FILE
+                  <input type="file" class="form-control" name="myrefdocs" />
+                </button> 
+              </div>
+            </div>
+          </div>
+            <div class="col-md-8 px-md-1">
+              <div class="form-group">
+                <button type="submit" class="btn btn-fill btn-primary ">
+                  Upload
+                </button>
+              </div>
+            </div>
+       
+          
+        </div>
+      </form>
+     OR<br><br>
+      <form role="form"
+      class="sub-form"action="/refdocs/addRefDoc/{{gid}}" method="post">
+        {% csrf_token%}
+        <div class="form-group text-white w-75">
+          <table>
+            <tr>
+              <td>
+                Name:<input class="form-control" type="text" name="refdocname">
+              </td>
+              <td>
+              Details:<input class="form-control" type="text" name="refdocdetail">
+              </td>
+             
+            </tr>
+          </table>
+          <button type="submit" class="btn btn-fill btn-primary">add</button>
+        </div>
+    </form>
+      
+        <a href="{% url 'viewRefDoc'%}">
+          <button class="btn btn-fill btn-primary">
+            CLICK HERE TO VIEW REFERENCE DOCTOR
+          </button>
+        </a>
+     
+    </div>
+  </div>
+</div>
+
+<div class="row">
+  <div class="col-md-12">
+    <div class="card ">
+      <div class="card-header">
+        <h2 class="card-title"> ALL DOCTORS {{error}}</h2>
+        
+      
+      </div>
+      <div class="card-body">
+        <div class="table-responsive">
+          <table class="table tablesorter " id="">
+            <thead class=" text-primary">
+              <tr>
+                <th >
+                  <h4>Name</h4>
+                </th>
+                
+                <th>
+                 <h4> DETAILS</h4>
+                </th>
+                
+              </tr>
+            </thead>
+
+           
+            <tbody>
+              {% for p in page_obj %}
+              
+              <tr>
+                
+                <td>
+                  <a href="{% url 'print_ref_doctor' p.id %}">
+                <h5>{{p.name}} </h5>
+                   </a> 
+                </td>
+              
+                <td>
+                    {{p.details}}
+                </td>
+              </tr>
+           
+              {%endfor%}
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+  </div>
+  {% if page_obj.has_other_pages %}
+  <ul class="pagination justify-content-center ">
+    {% if page_obj.has_previous %}
+    <li class="pr-3"><a href="?page={{ page_obj.previous_page_number }}">&laquo;</a></li>
+  {% else %}
+    <li class="disabled pr-2"><span>&laquo;</span></li>
+  {% endif %}
+  {% for i in page_obj.paginator.page_range %}
+    {% if page_obj.number == i %}
+      <li class="active pr-2"><span>{{ i }} <span class="sr-only">(current)</span></span></li>
+    {% else %}
+      <li class="pr-2"><a href="?page={{ i }}">{{ i }}</a></li>
+    {% endif %}
+  {% endfor %}
+  {% if page_obj.has_next %}
+    <li class="pr-2"><a href="?page={{ page_obj.next_page_number }}">&raquo;</a></li>
+  {% else %}
+    <li class="disabled pl-3"><span>&raquo;</span></li>
+  {% endif %}
+  </ul>
+  {% endif %}
+
+{% endblock content %}
+
+<!-- Specific Page JS goes HERE  -->
+{% block javascripts %}{% endblock javascripts %}

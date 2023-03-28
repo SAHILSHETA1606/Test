@@ -1,0 +1,65 @@
+group,user,id,name,content_type,codename
+NA,NA,1,Can add log entry,admin | log entry,add_logentry
+NA,NA,2,Can change log entry,admin | log entry,change_logentry
+NA,NA,3,Can delete log entry,admin | log entry,delete_logentry
+NA,NA,4,Can view log entry,admin | log entry,view_logentry
+NA,NA,9,Can add group,auth | group,add_group
+NA,NA,10,Can change group,auth | group,change_group
+NA,NA,11,Can delete group,auth | group,delete_group
+NA,NA,12,Can view group,auth | group,view_group
+NA,NA,5,Can add permission,auth | permission,add_permission
+NA,NA,6,Can change permission,auth | permission,change_permission
+NA,NA,7,Can delete permission,auth | permission,delete_permission
+NA,NA,8,Can view permission,auth | permission,view_permission
+NA,NA,13,Can add user,auth | user,add_user
+NA,NA,14,Can change user,auth | user,change_user
+NA,NA,15,Can delete user,auth | user,delete_user
+NA,NA,16,Can view user,auth | user,view_user
+NA,NA,17,Can add content type,contenttypes | content type,add_contenttype
+NA,NA,18,Can change content type,contenttypes | content type,change_contenttype
+NA,NA,19,Can delete content type,contenttypes | content type,delete_contenttype
+NA,NA,20,Can view content type,contenttypes | content type,view_contenttype
+NA,NA,53,Can add disease,disease | disease,add_disease
+NA,NA,54,Can change disease,disease | disease,change_disease
+NA,NA,55,Can delete disease,disease | disease,delete_disease
+NA,NA,56,Can view disease,disease | disease,view_disease
+NA,NA,25,Can add account,loginmodule | account,add_account
+NA,NA,26,Can change account,loginmodule | account,change_account
+NA,NA,27,Can delete account,loginmodule | account,delete_account
+NA,NA,28,Can view account,loginmodule | account,view_account
+NA,NA,29,Can add patient_detail,loginmodule | patient_detail,add_patient_detail
+NA,NA,30,Can change patient_detail,loginmodule | patient_detail,change_patient_detail
+NA,NA,31,Can delete patient_detail,loginmodule | patient_detail,delete_patient_detail
+NA,NA,32,Can view patient_detail,loginmodule | patient_detail,view_patient_detail
+NA,NA,33,Can add patient_group,loginmodule | patient_group,add_patient_group
+NA,NA,34,Can change patient_group,loginmodule | patient_group,change_patient_group
+NA,NA,35,Can delete patient_group,loginmodule | patient_group,delete_patient_group
+NA,NA,36,Can view patient_group,loginmodule | patient_group,view_patient_group
+NA,NA,37,Can add patient_health_detail,loginmodule | patient_health_detail,add_patient_health_detail
+NA,NA,38,Can change patient_health_detail,loginmodule | patient_health_detail,change_patient_health_detail
+NA,NA,39,Can delete patient_health_detail,loginmodule | patient_health_detail,delete_patient_health_detail
+NA,NA,40,Can view patient_health_detail,loginmodule | patient_health_detail,view_patient_health_detail
+NA,NA,41,Can add medicine,medicine | medicine,add_medicine
+NA,NA,42,Can change medicine,medicine | medicine,change_medicine
+NA,NA,43,Can delete medicine,medicine | medicine,delete_medicine
+NA,NA,44,Can view medicine,medicine | medicine,view_medicine
+NA,NA,49,Can add doc_group,refdoc | doc_group,add_doc_group
+NA,NA,50,Can change doc_group,refdoc | doc_group,change_doc_group
+NA,NA,51,Can delete doc_group,refdoc | doc_group,delete_doc_group
+NA,NA,52,Can view doc_group,refdoc | doc_group,view_doc_group
+NA,NA,45,Can add ref doc,refdoc | ref doc,add_refdoc
+NA,NA,46,Can change ref doc,refdoc | ref doc,change_refdoc
+NA,NA,47,Can delete ref doc,refdoc | ref doc,delete_refdoc
+NA,NA,48,Can view ref doc,refdoc | ref doc,view_refdoc
+NA,NA,61,Can add report,report | report,add_report
+NA,NA,62,Can change report,report | report,change_report
+NA,NA,63,Can delete report,report | report,delete_report
+NA,NA,64,Can view report,report | report,view_report
+NA,NA,21,Can add session,sessions | session,add_session
+NA,NA,22,Can change session,sessions | session,change_session
+NA,NA,23,Can delete session,sessions | session,delete_session
+NA,NA,24,Can view session,sessions | session,view_session
+NA,NA,57,Can add symptoms,symptoms | symptoms,add_symptoms
+NA,NA,58,Can change symptoms,symptoms | symptoms,change_symptoms
+NA,NA,59,Can delete symptoms,symptoms | symptoms,delete_symptoms
+NA,NA,60,Can view symptoms,symptoms | symptoms,view_symptoms

@@ -1,0 +1,83 @@
+
+ {% if messages %}
+ {% for message in messages %}
+  {% if message.tags %}  <script>alert("{{ message }}")</script> {% endif %}
+
+ {% endfor %}
+
+{% endif %}
+    <div class="sidebar">
+      <div class="sidebar-wrapper">
+        <div class="logo">
+          <a target="_blank" rel="sponsored noopener noreferrer" 
+             href="https://appseed.us/admin-dashboards/django-dashboard-black" class="simple-text logo-mini">
+            HEY!!
+          </a>
+          <a target="_blank" rel="sponsored noopener noreferrer" 
+             href="https://appseed.us/admin-dashboards/django-dashboard-black" class="simple-text logo-normal">
+            CLINIC SOFTWARE
+          </a>
+        </div>
+
+        <ul class="nav">
+        
+
+          <li class="{% if 'index' in segment %} active {% endif %}">
+            <a href="/">
+              <i class="tim-icons icon-chart-pie-36"></i>
+              <p>Dashboard</p>
+            </a>
+          </li>
+          <li class="{% if 'icons' in segment %} active {% endif %}">
+            <a href="{% url 'main_patient' %}">
+              <i class="tim-icons icon-single-02"></i>
+              <p>PATIENTS</p>
+            </a>
+          </li>
+          
+          <li class="{% if 'maps' in segment %} active {% endif %}">
+            <a href="{% url 'visit_summary' %}">
+              <i class="tim-icons icon-bullet-list-67"></i>
+              <p>SUMMARY</p>
+            </a>
+          </li>
+          <li class="{% if 'notifications' in segment %} active {% endif %}">
+            <a href="{% url 'all_group' %}">
+              <i class="tim-icons icon-molecule-40"></i>
+              <p>GROUP</p>
+            </a>
+          </li>
+        <!--  <li class="{% if 'page-user' in segment %} active {% endif %}">
+            <a href="/page-user.html">
+              <i class="tim-icons icon-single-02"></i>
+              <p>User Profile</p>
+            </a>
+          </li>-->
+          <li class="{% if 'tables' in segment %} active {% endif %}">
+            <a href="{% url 'uploadfile' %}">
+              <i class="tim-icons icon-cloud-upload-94"></i>
+              <p>ADD DATA FROM EXTERNAL</p>
+            </a>
+          </li>
+          <li class="{% if 'tables' in segment %} active {% endif %}">
+            <a href="{% url 'excelreport' %}">
+              <i class="tim-icons icon-cloud-download-93"></i>
+              <p>BACKUP</p>
+            </a>
+          </li>
+          <li class="{% if 'tables' in segment %} active {% endif %}">
+            <a href="{% url 'ref_doctor_all_groups' %}">
+              <i class="tim-icons icon-tap-02"></i>
+              <p>REF-DOCTOR</p>
+            </a>
+          </li>
+          
+
+         
+  
+          
+                    
+        </ul>
+        
+      </div>
+    </div>

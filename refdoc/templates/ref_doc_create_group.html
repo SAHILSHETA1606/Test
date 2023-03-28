@@ -1,0 +1,156 @@
+{% extends "layouts/base.html" %}
+
+{% block title %} Register {% endblock %} 
+
+<!-- Specific Page CSS goes HERE  -->
+{% block stylesheets %}
+<style>
+  .form-group .select-cities ,.form-group .chosen-cities {
+    padding: 10px 18px 10px 18px;
+    border-color: #2b3553;
+    border-radius: 0.4285rem;
+    font-size: 0.75rem;
+    transition: color 0.3s ease-in-out, border-color 0.3s ease-in-out, background-color 0.3s ease-in-out;
+    display: block;
+    width: 100%;
+    height: calc(7rem + 2px);
+   
+    font-weight: 400;
+    line-height: 1.42857;
+    color: rgba(255, 255, 255, 0.8);
+    background-color: transparent;
+    background-clip: padding-box;
+    border: 1px solid #2b3553;
+    
+    box-shadow: none;
+    
+}
+#someinput{
+  padding: 10px 18px 10px 18px;
+    border-color: #2b3553;
+    border-radius: 0.4285rem;
+    font-size: 0.75rem;
+    transition: color 0.3s ease-in-out, border-color 0.3s ease-in-out, background-color 0.3s ease-in-out;
+    display: block;
+    width: 100%;
+    height: calc(2.25rem + 2px);
+   
+    font-weight: 400;
+    line-height: 1.42857;
+    color: rgba(255, 255, 255, 0.8);
+    background-color: transparent;
+    background-clip: padding-box;
+    border: 1px solid #2b3553;
+    
+    box-shadow: none;
+    
+}
+
+
+
+</style>
+{% endblock stylesheets %}
+
+{% block content %}
+
+        <div class="row">
+          <div class="col-md-12">
+            <div class="card">
+                <div class="card-header">
+       
+                    <h1><span></span>CREATE GROUP HERE:-</h1>
+                  </div>
+              <form role="form" method="post" action="{% url 'ref_doctor_create_group' %}">
+                {% csrf_token %}
+                
+                <div class="card-body">
+                    <div class="row">
+                        <div class="col-md-3 px-md-1">
+                          <div class="form-group">
+                            <label> <h4><span></span>NAME OF GROUP</h4></label>
+                            <input class="form-control" id="gname" name="gname" required="" type="text" value="">
+                          </div>
+                        </div>
+                    </div>
+                </div>
+
+                
+                
+                    
+                <div class="card-footer">
+                  <button type="submit" name="submit" class="btn btn-fill btn-primary">CREATE</button>
+                  
+                </div>
+
+              </form>
+
+            </div>
+          </div>
+      </div>
+
+
+{% endblock content %}
+
+<!-- Specific Page JS goes HERE  -->
+{% block javascripts %}
+<script>
+$(function() {
+  opts = $('#optlist option').map(function() {
+    return [
+      [this.value, $(this).text()]
+    ];
+  });
+
+
+  $('#someinput').keyup(function() {
+
+    var rxp = new RegExp($('#someinput').val(), 'i');
+    var optlist = $('#optlist').empty();
+    opts.each(function() {
+      if (rxp.test(this[1])) {
+        optlist.append($('<option/>').attr('value', this[0]).text(this[1]));
+      } else {
+        optlist.append($('<option/>').attr('value', this[0]).text(this[1]).addClass("hidden"));
+      }
+    });
+    $(".hidden").toggleOption(false);
+
+  });
+  $('.select-cities').click(function() {
+    $('.select-cities option:selected').remove().appendTo('.chosen-cities');
+    opts = $('#optlist option').map(function() {
+      return [
+        [this.value, $(this).text()]
+      ];
+    });
+  });
+
+  $('.chosen-cities').click(function() {
+    $('.chosen-cities option:selected').remove().appendTo('.select-cities');
+    opts = $('#optlist option').map(function() {
+      return [
+        [this.value, $(this).text()]
+      ];
+    });
+  });
+
+
+});
+
+jQuery.fn.toggleOption = function(show) {
+  jQuery(this).toggle(show);
+  if (show) {
+    if (jQuery(this).parent('span.toggleOption').length)
+      jQuery(this).unwrap();
+  } else {
+    if (jQuery(this).parent('span.toggleOption').length == 0)
+      jQuery(this).wrap('<span class="toggleOption" style="display: none;" />');
+  }
+};</script>
+
+{% endblock javascripts %}
+
+
+
+
+    

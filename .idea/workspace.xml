@@ -1,0 +1,299 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="768aaf55-5e07-4fae-8ba3-b4717b4ee5b6" name="Changes" comment="first-1">
+      <change beforePath="$PROJECT_DIR$/loginmodule/templates/home/addpatient.html" beforeDir="false" afterPath="$PROJECT_DIR$/loginmodule/templates/home/addpatient.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/medicine/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/medicine/views.py" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Merge.Settings">
+    <option name="BRANCH" value="origin/master" />
+  </component>
+  <component name="Git.Settings">
+    <excluded-from-favorite>
+      <branch-storage>
+        <map>
+          <entry type="LOCAL">
+            <value>
+              <list>
+                <branch-info repo="$PROJECT_DIR$" source="master" />
+              </list>
+            </value>
+          </entry>
+        </map>
+      </branch-storage>
+    </excluded-from-favorite>
+    <favorite-branches>
+      <branch-storage>
+        <map>
+          <entry type="LOCAL">
+            <value>
+              <list>
+                <branch-info repo="$PROJECT_DIR$" source="second-branch" />
+                <branch-info repo="$PROJECT_DIR$" source="first-branch" />
+              </list>
+            </value>
+          </entry>
+        </map>
+      </branch-storage>
+    </favorite-branches>
+    <option name="RECENT_BRANCH_BY_REPOSITORY">
+      <map>
+        <entry key="$PROJECT_DIR$" value="1" />
+      </map>
+    </option>
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="HighlightingSettingsPerFile">
+    <setting file="file://$PROJECT_DIR$/loginmodule/views.py" root0="FORCE_HIGHLIGHTING" />
+  </component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
+  </component>
+  <component name="ProjectId" id="2NEKpGVSyCYpenMENmzoIfCb1pI" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/sahil/OneDrive/Desktop/New folder/clinicsoftware&quot;
+  }
+}</component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="768aaf55-5e07-4fae-8ba3-b4717b4ee5b6" name="Changes" comment="" />
+      <created>1679223983030</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1679223983030</updated>
+    </task>
+    <task id="LOCAL-00001" summary="second">
+      <created>1679224013707</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1679224013707</updated>
+    </task>
+    <task id="LOCAL-00002" summary="first-1">
+      <created>1679231614193</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1679231614193</updated>
+    </task>
+    <task id="LOCAL-00003" summary="second-1">
+      <created>1679231844446</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1679231844446</updated>
+    </task>
+    <task id="LOCAL-00004" summary="second-2">
+      <created>1679293706569</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1679293706569</updated>
+    </task>
+    <task id="LOCAL-00005" summary="second-2-resolve">
+      <created>1679294057902</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1679294057902</updated>
+    </task>
+    <task id="LOCAL-00006" summary="second-3">
+      <created>1679294136636</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1679294136636</updated>
+    </task>
+    <task id="LOCAL-00007" summary="second-5">
+      <created>1679294207590</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1679294207590</updated>
+    </task>
+    <task id="LOCAL-00008" summary="second-5">
+      <created>1679294464222</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1679294464222</updated>
+    </task>
+    <task id="LOCAL-00009" summary="first-1">
+      <created>1679294933249</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1679294933249</updated>
+    </task>
+    <task id="LOCAL-00010" summary="first-1">
+      <created>1679295633867</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1679295633867</updated>
+    </task>
+    <task id="LOCAL-00011" summary="first-1">
+      <created>1679295948093</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1679295948093</updated>
+    </task>
+    <task id="LOCAL-00012" summary="second-2">
+      <created>1679298979026</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1679298979026</updated>
+    </task>
+    <task id="LOCAL-00013" summary="first-3">
+      <created>1679300765599</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1679300765599</updated>
+    </task>
+    <task id="LOCAL-00014" summary="first-3">
+      <created>1679826611850</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1679826611850</updated>
+    </task>
+    <task id="LOCAL-00015" summary="first-1">
+      <created>1679844746595</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1679844746595</updated>
+    </task>
+    <task id="LOCAL-00016" summary="first-2">
+      <created>1679844796942</created>
+      <option name="number" value="00016" />
+      <option name="presentableId" value="LOCAL-00016" />
+      <option name="project" value="LOCAL" />
+      <updated>1679844796942</updated>
+    </task>
+    <task id="LOCAL-00017" summary="first-2">
+      <created>1679844972899</created>
+      <option name="number" value="00017" />
+      <option name="presentableId" value="LOCAL-00017" />
+      <option name="project" value="LOCAL" />
+      <updated>1679844972899</updated>
+    </task>
+    <task id="LOCAL-00018" summary="first-3">
+      <created>1679845010269</created>
+      <option name="number" value="00018" />
+      <option name="presentableId" value="LOCAL-00018" />
+      <option name="project" value="LOCAL" />
+      <updated>1679845010269</updated>
+    </task>
+    <task id="LOCAL-00019" summary="first-3">
+      <created>1679845248420</created>
+      <option name="number" value="00019" />
+      <option name="presentableId" value="LOCAL-00019" />
+      <option name="project" value="LOCAL" />
+      <updated>1679845248420</updated>
+    </task>
+    <task id="LOCAL-00020" summary="first-1">
+      <created>1679994572201</created>
+      <option name="number" value="00020" />
+      <option name="presentableId" value="LOCAL-00020" />
+      <option name="project" value="LOCAL" />
+      <updated>1679994572201</updated>
+    </task>
+    <task id="LOCAL-00021" summary="first-1">
+      <created>1679995064387</created>
+      <option name="number" value="00021" />
+      <option name="presentableId" value="LOCAL-00021" />
+      <option name="project" value="LOCAL" />
+      <updated>1679995064387</updated>
+    </task>
+    <option name="localTasksCounter" value="22" />
+    <servers />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+    <option name="RECENT_FILTERS">
+      <map>
+        <entry key="Branch">
+          <value>
+            <list>
+              <RecentGroup>
+                <option name="FILTER_VALUES">
+                  <option value="first" />
+                </option>
+              </RecentGroup>
+              <RecentGroup>
+                <option name="FILTER_VALUES">
+                  <option value="origin/second" />
+                </option>
+              </RecentGroup>
+              <RecentGroup>
+                <option name="FILTER_VALUES">
+                  <option value="second-branch" />
+                </option>
+              </RecentGroup>
+              <RecentGroup>
+                <option name="FILTER_VALUES">
+                  <option value="first-branch" />
+                </option>
+              </RecentGroup>
+              <RecentGroup>
+                <option name="FILTER_VALUES">
+                  <option value="master" />
+                </option>
+              </RecentGroup>
+              <RecentGroup>
+                <option name="FILTER_VALUES">
+                  <option value="origin/master" />
+                </option>
+              </RecentGroup>
+              <RecentGroup>
+                <option name="FILTER_VALUES">
+                  <option value="HEAD" />
+                </option>
+              </RecentGroup>
+            </list>
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="second" />
+    <MESSAGE value="second-2-resolve" />
+    <MESSAGE value="second-3" />
+    <MESSAGE value="second-5" />
+    <MESSAGE value="second-1" />
+    <MESSAGE value="second-2" />
+    <MESSAGE value="first-2" />
+    <MESSAGE value="first-3" />
+    <MESSAGE value="first-1" />
+    <option name="LAST_COMMIT_MESSAGE" value="first-1" />
+  </component>
+</project>

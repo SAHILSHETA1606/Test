@@ -1,0 +1,121 @@
+{% extends "layouts/base.html" %}
+
+{% block title %} UI Tables {% endblock %} 
+
+<!-- Specific Page CSS goes HERE  -->
+{% block stylesheets %}{% endblock stylesheets %}
+
+{% block content %}
+
+<div class="row">
+  <div class="col-md-12">
+    <div class="card ">
+      <div class="card-header">
+       
+        <h1><span></span> GROUP INFO</h1>
+      </div>
+      <div class="card-body">
+        <div class="table-responsive">
+          <table class="table tablesorter " id="">
+            <thead class=" text-primary">
+              <tr>
+                <th class="text-center">
+                  Name
+                </th>
+                
+                <th>
+                  LEFT FROM DOC
+                </th>
+                <th>
+                  LEFT TO DOC
+                </th>
+                
+              </tr>
+            </thead>
+
+           
+            <tbody>
+                {% for i in list1 %}
+              <tr>
+                <td>
+
+                    <div class="row">
+                        <div class="col-lg-8 ml-auto mr-auto">
+                          <div class="row">
+                            <div class="col-md-8">
+                              <a href="{% url 'particular_person_summary' i.id %}">
+                              <button class="btn btn-primary btn-block" >{{i.id}} {{i.name}}  </button>
+                              </a>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      
+                </td>
+                
+                <td>
+             
+                    {{i.dleft}}
+             
+                </td>
+                <td>
+      
+                    {{i.pleft}}
+      
+                </td>
+                <td class="text-center">
+                    {{p.contact}}
+                </td>
+              </tr>
+              {%endfor%}
+             
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+
+    <div class="card">
+        <div class="card-header mb-5">
+          
+          <h1><span></span> SUMMARY OF GROUP</h1>
+         
+        </div>
+        <div class="card-body">
+          
+          
+          
+            
+          <div class="typography-line">
+              <!--<h3><span>PAID:-</span></h3>-->
+            <blockquote>
+              
+              <p class="blockquote blockquote-primary">
+                  GROUP ACCOUNT:-<br><br><br>
+                  TOTAL PAID:-{{tpaid}}<br>
+                  TOTAL FEES:-{{tfees}}<br>
+                  TOTAL LEFT TO TAKE FROM GROUP:-{{tfrom_patient}}<br>
+                  TOTAL LEFT TO GIVE GROUP:-{{tfrom_doc}}<br>
+                <br>
+                <br>
+                
+              </p>
+            </blockquote>
+          </div>
+      
+        </div>
+      </div>
+
+  </div>
+</div>
+
+
+
+   
+        
+  
+
+{% endblock content %}
+
+<!-- Specific Page JS goes HERE  -->
+{% block javascripts %}{% endblock javascripts %}
