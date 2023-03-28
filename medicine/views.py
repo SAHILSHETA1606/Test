@@ -30,9 +30,6 @@ def view_medicine(request):
     print(meds)
     return render(request,'viewmeds.html',{'meds':meds})
 
-hjfdfdfd
-
-hjkhkj
 def addMedicine(request):
     if request.method == 'POST':
         new_med=request.POST['medicine']
@@ -41,4 +38,5 @@ def addMedicine(request):
         d=Medicine(medicine_name=new_med,medicine_type=new_type)
         d.save()
     return redirect('uploadfile')
-    ghjgjh
+
+ #first-1234
