@@ -4,10 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="768aaf55-5e07-4fae-8ba3-b4717b4ee5b6" name="Changes" comment="first-1">
-      <change beforePath="$PROJECT_DIR$/loginmodule/templates/home/addpatient.html" beforeDir="false" afterPath="$PROJECT_DIR$/loginmodule/templates/home/addpatient.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/medicine/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/medicine/views.py" afterDir="false" />
-    </list>
+    <list default="true" id="768aaf55-5e07-4fae-8ba3-b4717b4ee5b6" name="Changes" comment="first-1" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -46,7 +43,7 @@
     </favorite-branches>
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
-        <entry key="$PROJECT_DIR$" value="1" />
+        <entry key="$PROJECT_DIR$" value="master" />
       </map>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
