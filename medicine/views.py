@@ -39,4 +39,4 @@ def addMedicine(request):
         d.save()
     return redirect('uploadfile')
 
- #first-123
+ #first-123  
