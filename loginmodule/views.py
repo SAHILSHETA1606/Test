@@ -1490,9 +1490,7 @@ def today_patient(request):
 
 master-6
 #master
-
-#master1gefoj
-dmkvmfmkmmls
+master 5
 
 
 
