@@ -4,7 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="768aaf55-5e07-4fae-8ba3-b4717b4ee5b6" name="Changes" comment="first-1" />
+    <list default="true" id="768aaf55-5e07-4fae-8ba3-b4717b4ee5b6" name="Changes" comment="first-1">
+      <change beforePath="$PROJECT_DIR$/loginmodule/templates/home/addpatient.html" beforeDir="false" afterPath="$PROJECT_DIR$/loginmodule/templates/home/addpatient.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/loginmodule/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/loginmodule/views.py" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -43,7 +46,7 @@
     </favorite-branches>
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
-        <entry key="$PROJECT_DIR$" value="master" />
+        <entry key="$PROJECT_DIR$" value="1" />
       </map>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -222,7 +225,28 @@
       <option name="project" value="LOCAL" />
       <updated>1679995064387</updated>
     </task>
-    <option name="localTasksCounter" value="22" />
+    <task id="LOCAL-00022" summary="first-1">
+      <created>1679997603107</created>
+      <option name="number" value="00022" />
+      <option name="presentableId" value="LOCAL-00022" />
+      <option name="project" value="LOCAL" />
+      <updated>1679997603107</updated>
+    </task>
+    <task id="LOCAL-00023" summary="first-2">
+      <created>1679997643113</created>
+      <option name="number" value="00023" />
+      <option name="presentableId" value="LOCAL-00023" />
+      <option name="project" value="LOCAL" />
+      <updated>1679997643113</updated>
+    </task>
+    <task id="LOCAL-00024" summary="first-3">
+      <created>1679997678403</created>
+      <option name="number" value="00024" />
+      <option name="presentableId" value="LOCAL-00024" />
+      <option name="project" value="LOCAL" />
+      <updated>1679997678403</updated>
+    </task>
+    <option name="localTasksCounter" value="25" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -288,9 +312,9 @@
     <MESSAGE value="second-5" />
     <MESSAGE value="second-1" />
     <MESSAGE value="second-2" />
+    <MESSAGE value="first-1" />
     <MESSAGE value="first-2" />
     <MESSAGE value="first-3" />
-    <MESSAGE value="first-1" />
-    <option name="LAST_COMMIT_MESSAGE" value="first-1" />
+    <option name="LAST_COMMIT_MESSAGE" value="first-3" />
   </component>
 </project>
