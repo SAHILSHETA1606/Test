@@ -1,1 +1,0 @@
-id,patient_id,fname,lname,symptoms,diagnostic,prescription,note,m_time,schd_time,countt,medicine_outside,schd_outside,time_outside,note_outside,count_outside,report,refdoc,date,time,fees,paid,paid_original,left_from_patient,left_from_doc
