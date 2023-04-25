@@ -32,7 +32,7 @@ from django.utils.datastructures import MultiValueDictKeyError
 # Create your views here.
 def home(request):
 
-    
+
     return render(request,'home/index.html')
 
 
